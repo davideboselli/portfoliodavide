@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, onBeforeUnmount } from 'vue'
+import { onMounted, ref, onBeforeUnmount, nextTick } from 'vue'
 import gsap from 'gsap'
 import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
@@ -21,22 +21,24 @@ const viewportRef = ref(null)
 let swiperInstance = null
 
 onMounted(() => {
-  // Inizializza Swiper esattamente come nello snippet originale
-  if (viewportRef.value) {
-    swiperInstance = new Swiper(viewportRef.value, {
-      slidesPerView: 'auto',
-      spaceBetween: window.innerWidth * 0.025,
-      loop: true,
-      speed: 7000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
-      allowTouchMove: false,
-    })
-    
-    gsap.from(viewportRef.value, { opacity: 0, duration: 1, ease: 'power3.out', delay: 0.3 })
-  }
+  nextTick(() => {
+    // Inizializza Swiper esattamente come nello snippet originale dopo che il DOM è pronto
+    if (viewportRef.value) {
+      swiperInstance = new Swiper(viewportRef.value, {
+        slidesPerView: 'auto',
+        spaceBetween: window.innerWidth * 0.025,
+        loop: true,
+        speed: 7000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+      })
+      
+      gsap.from(viewportRef.value, { opacity: 0, duration: 1, ease: 'power3.out', delay: 0.3 })
+    }
+  })
 })
 
 onBeforeUnmount(() => {
