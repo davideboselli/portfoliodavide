@@ -4,23 +4,25 @@ import gsap from 'gsap'
 
 const TEAL = '#65DCBC'
 
+const base = import.meta.env.BASE_URL
+
 // ── Dati immagini ──
 const items = [
-  { src: '/img/render 1 2.jpg', title: 'Tha Supe', sub: '3D · 2025' },
-  { src: '/img/Render 1 3.jpg', title: 'Little nightmers', sub: '3D · 2025' },
-  { src: '/img/Render 1 4.jpg', title: 'Ogrim', sub: '3D · 2025' },
-  { src: '/img/Render 1.jpg', title: 'Nut house', sub: '3D · 2025' },
-  { src: '/img/render 2 2.jpg', title: 'Tha Supe', sub: '3D · 2025' },
-  { src: '/img/Render 2.jpg', title: 'Nut house', sub: '3D · 2025' },
-  { src: '/img/Render 5.jpg', title: 'Ogrim', sub: '3D · 2025' },
-  { src: '/img/Render 11.jpg', title: 'Little nightmers', sub: '3D · 2025' },
-  { src: '/img/hardcore.jpg', title: 'Tony the gabber', sub: '3D · 2025' },
-  { src: '/img/shiva.jpg', title: 'Shiva', sub: '3D · 2025' },
-  { src: '/img/se.jpg', title: 'Sfera', sub: '3D · 2025' },
-  { src: '/img/salmo.jpg', title: 'Salmo', sub: '3D · 2025' },
-  { src: '/img/robot.jpg', title: 'Robot', sub: '3D · 2025' },
-  { src: '/img/RENDER_35.jpg', title: 'Ninja', sub: '3D · 2025' },
-  { src: '/img/zac.jpg', title: 'Zac the cat', sub: '3D · 2025' },
+  { src: base + 'img/render 1 2.jpg', title: 'Tha Supe', sub: '3D · 2025' },
+  { src: base + 'img/Render 1 3.jpg', title: 'Little nightmers', sub: '3D · 2025' },
+  { src: base + 'img/Render 1 4.jpg', title: 'Ogrim', sub: '3D · 2025' },
+  { src: base + 'img/Render 1.jpg', title: 'Nut house', sub: '3D · 2025' },
+  { src: base + 'img/render 2 2.jpg', title: 'Tha Supe', sub: '3D · 2025' },
+  { src: base + 'img/Render 2.jpg', title: 'Nut house', sub: '3D · 2025' },
+  { src: base + 'img/Render 5.jpg', title: 'Ogrim', sub: '3D · 2025' },
+  { src: base + 'img/Render 11.jpg', title: 'Little nightmers', sub: '3D · 2025' },
+  { src: base + 'img/hardcore.jpg', title: 'Tony the gabber', sub: '3D · 2025' },
+  { src: base + 'img/shiva.jpg', title: 'Shiva', sub: '3D · 2025' },
+  { src: base + 'img/se.jpg', title: 'Sfera', sub: '3D · 2025' },
+  { src: base + 'img/salmo.jpg', title: 'Salmo', sub: '3D · 2025' },
+  { src: base + 'img/robot.jpg', title: 'Robot', sub: '3D · 2025' },
+  { src: base + 'img/RENDER_35.jpg', title: 'Ninja', sub: '3D · 2025' },
+  { src: base + 'img/zac.jpg', title: 'Zac the cat', sub: '3D · 2025' },
 ]
 
 const trackRef = ref(null)

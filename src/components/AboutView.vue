@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const base = import.meta.env.BASE_URL
 const TEAL = '#65DCBC'
 const rightCol = ref(null)
 const mobileContent = ref(null)
@@ -70,7 +71,7 @@ onMounted(() => {
     <!-- Colonna sinistra fissa -->
     <div class="w-1/2 h-full flex items-center justify-center px-16 shrink-0">
       <div class="w-full max-w-sm aspect-[3/4] overflow-hidden bg-black/5">
-        <img ref="photoRef" src="/img/me.JPG" alt="Davide Boselli" class="w-full h-full object-cover block">
+        <img ref="photoRef" :src="`${base}img/me.JPG`" alt="Davide Boselli" class="w-full h-full object-cover block">
       </div>
     </div>
 
@@ -138,7 +139,7 @@ onMounted(() => {
 
     <div class="w-full px-6 mb-10">
       <div class="w-full aspect-[3/4] overflow-hidden bg-black/5">
-        <img ref="mobilePhotoRef" src="/img/me.JPG" alt="Davide Boselli" class="w-full h-full object-cover block">
+        <img ref="mobilePhotoRef" :src="`${base}img/me.JPG`" alt="Davide Boselli" class="w-full h-full object-cover block">
       </div>
     </div>
 

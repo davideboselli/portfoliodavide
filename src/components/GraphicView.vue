@@ -19,10 +19,12 @@ onUnmounted(() => {
   window.removeEventListener('resize', updateMobile);
 });
 
+const base = import.meta.env.BASE_URL;
+
 const imgData = [
   { 
-    src: '/img/Compositing 4.jpg', 
-    images: ['/img/Post 1.jpg','/img/Post 4.jpg','/img/giornale.jpg','/img/Phone.png'], 
+    src: base + 'img/Compositing 4.jpg', 
+    images: [base + 'img/Post 1.jpg', base + 'img/Post 4.jpg', base + 'img/giornale.jpg', base + 'img/Phone.png'], 
     wD: '32vw', wM: '75vw', 
     topD: '5%', topM: '5%', 
     leftD: '4%', leftM: '12%', 
@@ -31,8 +33,8 @@ const imgData = [
     text: 'Progetto accademico mirato alla costruzione di un identità partendo da un elemento del passato. Ho deciso di partire dagli anni 70 e riprendere lo stupefacente LSD e creare un e-commerce nei giorni nostri. Con un approccio ironico, leggero, ma anche professionale che si rifacesse alla corporate ho creato un brand veritiero e serio.'
   },
   { 
-    src: '/img/Blooming.jpg', 
-    images: ['/img/flyer 1.jpg','/img/flyer 12.jpg','/img/flyer 13.jpg','/img/flyer 14.jpg'], 
+    src: base + 'img/Blooming.jpg', 
+    images: [base + 'img/flyer 1.jpg', base + 'img/flyer 12.jpg', base + 'img/flyer 13.jpg', base + 'img/flyer 14.jpg'], 
     wD: '26vw', wM: '65vw', 
     topD: '30%', topM: '30%', 
     leftD: '60%', leftM: '17%', 
@@ -41,8 +43,8 @@ const imgData = [
     text: 'Impostazione e direzione creativa del Bloomin festival presso LABA Brescia, creazione di layout e decorazioni ambientali mirati alla promozione del festival.' 
   },
   { 
-    src: '/img/borgo.jpg', 
-    images: ['/img/01.jpg','/img/04.jpg','/img/Mockup 1.jpg','/img/03.jpg'], 
+    src: base + 'img/borgo.jpg', 
+    images: [base + 'img/01.jpg', base + 'img/04.jpg', base + 'img/Mockup 1.jpg', base + 'img/03.jpg'], 
     wD: '38vw', wM: '85vw', 
     topD: '55%', topM: '55%', 
     leftD: '36%', leftM: '7%', 
@@ -51,8 +53,8 @@ const imgData = [
     text: 'Descrizione del progetto. Inserisci qui il testo che vuoi mostrare nel dettaglio.' 
   },
   { 
-    src: '/img/bergamoscienza4.png', 
-    images: ['/img/bergamoscienza1.png','/img/bergamoscienza2.png','/img/bergamoscienza3.png','/img/Totebag.png'], 
+    src: base + 'img/bergamoscienza4.png', 
+    images: [base + 'img/bergamoscienza1.png', base + 'img/bergamoscienza2.png', base + 'img/bergamoscienza3.png', base + 'img/Totebag.png'], 
     wD: '24vw', wM: '70vw', 
     topD: '80%', topM: '80%', 
     leftD: '10%', leftM: '15%', 

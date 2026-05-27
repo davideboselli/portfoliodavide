@@ -4,15 +4,17 @@ import gsap from 'gsap'
 import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
 
+const base = import.meta.env.BASE_URL
+
 const items = [
-  { src: '/img/ombra.jpg' },
-  { src: '/img/incubo.jpg' },
-  { src: '/img/rana.jpg' },
-  { src: '/img/minatore.jpg' },
-  { src: '/img/odno.jpg' },
-  { src: '/img/incubo2.jpg' },
-  { src: '/img/topo.jpg' },
-  { src: '/img/pizza.jpg' },
+  { src: base + 'img/ombra.jpg' },
+  { src: base + 'img/incubo.jpg' },
+  { src: base + 'img/rana.jpg' },
+  { src: base + 'img/minatore.jpg' },
+  { src: base + 'img/odno.jpg' },
+  { src: base + 'img/incubo2.jpg' },
+  { src: base + 'img/topo.jpg' },
+  { src: base + 'img/pizza.jpg' },
 ]
 
 const viewportRef = ref(null)

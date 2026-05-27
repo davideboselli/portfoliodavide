@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 
+const base = import.meta.env.BASE_URL
 const gifRef = ref(null)
 
 onMounted(() => {
@@ -23,7 +24,7 @@ onMounted(() => {
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-[60vw] max-w-lg md:max-w-none md:w-[40vw]">
     <img
       ref="gifRef"
-      src="/img/titolo.gif"
+      :src="`${base}img/titolo.gif`"
       alt="Titolo"
       class="object-contain block"
     >
